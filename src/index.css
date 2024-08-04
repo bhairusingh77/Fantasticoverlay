@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Add these lines to import slick carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+.home-page {
+  padding: 2rem;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+}
+
+.intro-section, .features-section, .plugins-section {
+  margin-bottom: 2rem;
+}
+
+.intro-section .legend {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.feature-card {
+  background-color: #333333;
+}
+
+.feature-card i {
+  color: #0A78A4;
+}
+
+.feature-card h3 {
+  color: #FFFFFF;
+}
+
+.feature-card p {
+  color: #CCCCCC;
+}
+/* Custom styles for Slick carousel arrows */
+.slick-prev, .slick-next {
+  background-color: #EEEEEE; /* Dark color */
+  border-radius: 50%; /* Rounded corners */
+  width: 40px; /* Larger size */
+  height: 40px; /* Larger size */
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #31363F; /* Light color for the arrows */
+  font-size: 24px; /* Larger arrow size */
+}
+
+/* Keep dot size default */
+.slick-dots li button:before {
+  color: #2bbdc4; /* Accent color for the dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFBF00; /* Light color for the active dot */
+}
+
+
+/* Custom responsive adjustments for carousel */
+@media (max-width: 640px) {
+  .slick-prev, .slick-next {
+    width: 40px; /* Smaller size for smaller screens */
+    height: 40px; /* Smaller size for smaller screens */
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px; /* Smaller arrow size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .slick-prev, .slick-next {
+    width: 50px; /* Larger size for larger screens */
+    height: 50px; /* Larger size for larger screens */
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 28px; /* Larger arrow size */
+  }
+}
+/* Custom media queries for responsive headers */
+@media (max-width: 640px) {
+  .header-title {
+    font-size: 2rem; /* Adjust for smaller screens */
+  }
+
+  .header-description {
+    font-size: 1rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .header-title {
+    font-size: 3rem; /* Adjust for medium screens */
+  }
+
+  .header-description {
+    font-size: 1.25rem; /* Adjust for medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 4rem; /* Adjust for larger screens */
+  }
+
+  .header-description {
+    font-size: 1.5rem; /* Adjust for larger screens */
+  }
+}
+/* Add smooth animation for the sidebar */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+/* Custom animations for buttons and links */
+.button-animation {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-animation:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-animation {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-animation:hover {
+  transform: scale(1.05);
+  color: #F59E0B; /* Adjust to the hover color you prefer */
+}
+/* styles.css */
+.fade-in-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Style the radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-size: 1rem; /* Adjust font size for better readability */
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #F59E0B; /* Tailwind yellow color for active state */
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .radio-group {
+    flex-direction: column;
+  }
+}
+/* Hide Slick carousel navigation arrows on small screens */
+@media (max-width: 640px) {
+  .slick-prev,
+  .slick-next {
+    display: none; /* Hide navigation arrows */
+  }
+}
+
+/* Ensure that dots are visible and styled */
+.slick-dots {
+  bottom: 10px; /* Position dots at the bottom of the carousel */
+}
+
+.slick-dots li button:before {
+  color: #2bbdc4; /* Accent color for the dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFBF00; /* Color for the active dot */
+}
+/* Ensure the carousel container is responsive */
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+}
+
+/* Hide navigation arrows on small screens */
+@media (max-width: 640px) {
+  .slick-prev, .slick-next {
+    display: none;
+  }
+}
+
+/* Make sure carousel items are responsive */
+.slick-slide img, .slick-slide video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust the carousel dots for better visibility */
+.slick-dots {
+  bottom: 10px; /* Position dots closer to the carousel */
+}
+/* PluginCard styles */
+.plugin-card {
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px; /* Set a fixed width for small devices */
+  margin: auto; /* Center the card */
+}
+
+.plugin-card:hover {
+  transform: scale(1.05);
+}
+
+.plugin-card img {
+  width: 100%;
+  height: 12rem; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.plugin-card .title-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive grid container */
+.plugin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+/* Base styles for the boxes */
+.boxes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  transition: all 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Box styles */
+.box {
+  position: relative;
+  flex: 0 0 auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Styles for active and inactive boxes */
+.box-active {
+  border: 2px solid #facc15; /* Yellow border */
+}
+
+.box-inactive {
+  border: 2px solid #facc15; /* Yellow border */
+  opacity: 0.5;
+}
+.plugin-text {
+  font-size: xxx-large ;
+}
+
+/* Hide boxes on small and medium screens */
+@media (max-width: 639px) { /* Extra small devices (phones) */
+  .boxes-container {
+    display: none; /* Hide boxes */
+  }
+
+}
+
+/* Hide boxes on tablets */
+@media (min-width: 640px) and (max-width: 1023px) { /* Tablets and small laptops */
+  .boxes-container {
+    display: none; /* Hide boxes */
+  }
+  
+}
+
+/* Styles for larger screens (PC and TV) */
+@media (min-width: 1024px) { /* Large devices (laptops and desktops) */
+  .box-active {
+    aspect-ratio: 16 / 9;
+    width: 300px;
+    height: 169px;
+  }
+  .box-inactive {
+    aspect-ratio: 1 / 1;
+    width: 169px;
+    height: 169px;
+  }
+
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 8px; /* Adjust padding for smaller screens */
+}
+
+.overlay h3 {
+  font-size: 1rem; /* Smaller font size for smaller screens */
+}
+
+.overlay p {
+  font-size: 0.875rem; /* Even smaller font size for smaller screens */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.box-active {
+  width: 230px;
+  height: 130px;
+  transform: scale(1);
+}
+
+.box-inactive {
+  width: 130px;
+  height: 130px;
+}
+.plugin-boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.plugin-box img {
+  /* object-fit: cover; */
+  transform: scale(1.02);
+}
+
+.plugin-box h3 {
+  color: #fff;
+}
+
+.plugin-box p {
+  color: #ccc;
+}
+
+.plugin-box a {
+  display: flex;
+  text-decoration: none;
+}
+
+.plugin-box .rounded-l-lg {
+  border-radius: 8px 0 0 8px;
+}
+
+.plugin-box .rounded-r-lg {
+  border-radius: 0 8px 8px 0;
+}
+.plugin-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border: 2px solid #facc15; /* Yellow border */
+  border-radius: 12px;
+  overflow: hidden;
+  height: 300px ;
+}
+
+.plugin-box img {
+  object-fit: cover;
+}
+
+.plugin-box h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+/* For the three existing boxes with more rounded corners */
+.existing-boxes-container .box {
+  border: 3.2px solid #FBBF24; /* Yellow border with thickness */
+  border-radius: 1.3rem; /* Increase this value for more rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Ensure existing boxes have a rounded image */
+.existing-boxes-container .box img {
+  border-radius: 1.1rem; /* Match border radius of the box */
+}
+@media (min-width: 768px) { /* Tablet and up */
+  .plugin-box {
+    /* height: 100px; */
+    transform: scale(0.95);
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop and up */
+  .plugin-box {
+    height: 400px; /* Decrease height for larger screens if needed */
+    transform: scale(0.9); /* Adjust scale for larger screens */
+  }
+}

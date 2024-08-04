@@ -1,0 +1,177 @@
+/* Add this CSS to style the radio buttons */
+
+.radio-buttons-container {
+    display: flex;
+    background-color: #333333; /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+  }
+  
+  .radio-button {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff; /* Default text color */
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .radio-button.active {
+    color: #FFD700; /* Active text color (yellow) */
+    background-color: #1a1a1a; /* Slightly darker background for active state */
+  }
+  
+  .vertical-separator {
+    width: 1px;
+    background-color: #444; /* Light separator color */
+    height: auto;
+  }
+  /* Style the container for the radio buttons */
+.radio-buttons-container {
+    display: flex;
+    background-color: #333333; /* Dark background for the container */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    width: fit-content; /* Make the container width fit the content */
+  }
+  
+  /* Style each radio button option */
+  .radio-button {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1.5rem; /* Padding to ensure enough space for text */
+    cursor: pointer;
+    font-weight: bold;
+    color: #cccccc; /* Default text color */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    position: relative; /* For active state positioning */
+  }
+  
+  /* Style for the active state */
+  .radio-button.active {
+    color: #FFD700; /* Active text color (yellow) */
+    background-color: #222; /* Darker background for active state */
+  }
+  
+  /* Separator between the radio buttons */
+  .vertical-separator {
+    width: 1px;
+    background-color: #444; /* Light separator color */
+    height: auto;
+  }
+  
+  /* Ensure the radio buttons are spaced correctly */
+  .radio-buttons-container label:not(:last-child) {
+    margin-right: 0; /* Remove right margin to avoid extra space */
+  }
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Default to 16:9 aspect ratio for larger screens */
+  }
+  
+  .carousel-item img, .carousel-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 767px) {
+    .carousel-item {
+      padding-bottom: 100%; /* 1:1 aspect ratio for small mobile devices */
+    }
+  }
+  /* Styling for radio button container */
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem; /* Reduced spacing between radio buttons */
+}
+
+/* Styling for the custom radio button */
+.radio-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Fully rounded */
+  background-color: #333; /* Background color for the radio button */
+  color: #fff; /* Default text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+.radio-button.active {
+  background-color: #facc15; /* Active background color */
+  color: #333; /* Active text color (black) */
+}
+
+.radio-button input {
+  display: none; /* Hide default radio button */
+}
+
+.radio-button input:checked + .radio-button {
+  background-color: #facc15; /* Active background color */
+  color: #333; /* Active text color (black) */
+}
+/* src/Home.css */
+
+.plugin-boxes-container {
+  width: 100%;
+  scale: .9;
+}
+
+.plugin-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #fbbf24; /* Yellow border */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.plugin-box img {
+  flex: 1;
+  object-fit: cover;
+}
+
+.plugin-box .overlay {
+  flex: 1;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.plugin-box .overlay h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.plugin-box .overlay p {
+  font-size: 1rem;
+  color: #fff;
+}
+/* src/Home.css */
+
+@media (max-width: 768px) {
+  .plugin-box {
+    flex-direction: column;
+  }
+
+  .plugin-box img {
+    width: 100%;
+    height: auto;
+  }
+  .plugin-boxes-container {
+    width: 100%;
+   
+  }
+}

@@ -1,0 +1,72 @@
+:root {
+    --main-dark: #222831;
+    --secondary-dark: #31363F;
+    --accent: #76ABAE;
+    --light: #EEEEEE;
+  }
+  
+  body {
+    background-color: var(--main-dark);
+    color: var(--light);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header, footer {
+    background-color: var(--secondary-dark);
+    color: var(--light);
+    padding: 1rem;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-dark);
+  }
+  /* styles.css */
+.plugin-detail-image {
+  max-height: 400px; /* Adjust as needed */
+}
+
+.plugin-detail-content {
+  padding: 2rem;
+  background-color: #222831;
+}
+
+.plugin-detail-title {
+  color: #FFBF00;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.plugin-detail-description {
+  color: #CCCCCC;
+  margin-bottom: 1.5rem;
+}
+
+.plugin-detail-download-button {
+  background-color: #FFBF00;
+  color: #222831;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.plugin-detail-download-button:hover {
+  background-color: #FFD700;
+}
