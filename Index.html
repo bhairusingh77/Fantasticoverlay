@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio and Plugins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a class='under' href='/'><div class="logo">My Portfolio</div></a>
+            <ul>
+                <li><a href='/'>Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#plugins">Plugins</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Home Section -->
+    <section id="home">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <div class="carousel-content">
+                    <h1>Welcome to My Video Portfolio</h1>
+                    <p>Discover my work and check out my plugins.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h1>Explore My Latest Projects</h1>
+                    <p>Watch my latest videos and get inspired.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h1>Enhance Your Workflow</h1>
+                    <p>Check out my plugins to boost your productivity.</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" data-video="video1.mp4">
+                        <img src="video-thumbnail1.jpg" alt="Video Thumbnail">
+                        <h3>Documentary</h3>
+                    </div>
+                    <div class="card-back">
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front" data-video="video2.mp4">
+                        <img src="video-thumbnail2.jpg" alt="Video Thumbnail">
+                        <h3>Short Film</h3>
+                    </div>
+                    <div class="card-back">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+</section>
+
+
+    <!-- Plugins Section -->
+    <section id="plugins">
+        <h2>Plugins</h2>
+        <div class="plugins-grid">
+            <div class="plugin-item">
+                <h3>Plugin Title</h3>
+                <p>Plugin Description</p>
+                <a href='/plugins'><button>Buy Now</button></a>
+            </div>
+                <div class="plugins-grid">
+                <div class="plugin-item">
+                    <h3>Plugin Title</h3>
+                    <p>Plugin Description</p>
+                    <a href='/plugins'><button>Buy Now</button></a>
+                </div>
+                <div class="plugins-grid">
+                    <div class="plugin-item">
+                        <h3>Plugin Title</h3>
+                        <p>Plugin Description</p>
+                        <a href='/plugins'><button>Buy Now</button></a>
+                    </div>
+            <!-- Add more plugin items as needed -->
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="frosted-glass">
+        <h2>About Us</h2>
+        <p>Information about you or your team.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="frosted-glass">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="722e57b9-1ae9-423c-860b-ad43478b377f">
+            <input type="text" placeholder="Your Name" required name="first_name">
+            <input type="email" placeholder="Your Email"  required name="Email">
+            <textarea  placeholder="Your Message" required name="message" ></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <span class="close">&times;</span>
+        <video controls></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
